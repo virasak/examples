@@ -12,8 +12,8 @@ import (
 	"go-micro.dev/v4/util/log"
 )
 
-// send events using the publisher
-func sendEv(topic string, p micro.Publisher) {
+// send events using the micro.Event
+func sendEv(topic string, p micro.Event) {
 	t := time.NewTicker(time.Second)
 
 	for _ = range t.C {
@@ -41,7 +41,7 @@ func main() {
 	// parse command line
 	service.Init()
 
-	// create publisher
+	// create event
 	pub1 := micro.NewEvent("example.topic.pubsub.1", service.Client())
 	pub2 := micro.NewEvent("example.topic.pubsub.2", service.Client())
 

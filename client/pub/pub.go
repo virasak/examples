@@ -29,7 +29,7 @@ func main() {
 
 	p := micro.NewEvent("example", service.Client())
 
-	fmt.Println("\n--- Publisher example ---")
+	fmt.Println("\n--- Event example ---")
 
 	for i := 0; i < 10; i++ {
 		pub(i, p)

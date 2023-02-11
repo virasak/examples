@@ -12,7 +12,7 @@ import (
 )
 
 // publishes a message
-func pub(p micro.Publisher) {
+func pub(p micro.Event) {
 	msg := &example.Message{
 		Say: "This is an async message",
 	}
@@ -123,7 +123,7 @@ func main() {
 
 	p := micro.NewEvent("topic.example", service.Client())
 
-	fmt.Println("\n--- Publisher example ---")
+	fmt.Println("\n--- Event example ---")
 	pub(p)
 
 	fmt.Println("\n--- Call example ---")
