@@ -4,12 +4,13 @@ import (
 	"fmt"
 
 	"context"
+
 	example "github.com/go-micro/examples/server/proto/example"
 	"go-micro.dev/v4"
 )
 
 // publishes a message
-func pub(i int, p micro.Publisher) {
+func pub(i int, p micro.Event) {
 	msg := &example.Message{
 		Say: fmt.Sprintf("This is an async message %d", i),
 	}
@@ -26,7 +27,7 @@ func main() {
 	service := micro.NewService()
 	service.Init()
 
-	p := micro.NewPublisher("example", service.Client())
+	p := micro.NewEvent("example", service.Client())
 
 	fmt.Println("\n--- Publisher example ---")
 

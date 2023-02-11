@@ -23,7 +23,7 @@ func NewCache(opts ...cache.Option) *Cache {
 func (c *Cache) Get(ctx context.Context, req *pb.GetRequest, rsp *pb.GetResponse) error {
 	log.Infof("Received Cache.Get request: %v", req)
 
-	v, e, err := c.cache.Context(ctx).Get(req.Key)
+	v, e, err := c.cache.Get(ctx, req.Key)
 	if err != nil {
 		return err
 	}
@@ -42,7 +42,7 @@ func (c *Cache) Put(ctx context.Context, req *pb.PutRequest, rsp *pb.PutResponse
 		return err
 	}
 
-	if err := c.cache.Context(ctx).Put(req.Key, req.Value, d); err != nil {
+	if err := c.cache.Put(ctx, req.Key, req.Value, d); err != nil {
 		return err
 	}
 
@@ -52,7 +52,7 @@ func (c *Cache) Put(ctx context.Context, req *pb.PutRequest, rsp *pb.PutResponse
 func (c *Cache) Delete(ctx context.Context, req *pb.DeleteRequest, rsp *pb.DeleteResponse) error {
 	log.Infof("Received Cache.Delete request: %v", req)
 
-	if err := c.cache.Context(ctx).Delete(req.Key); err != nil {
+	if err := c.cache.Delete(ctx, req.Key); err != nil {
 		return err
 	}
 

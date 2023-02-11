@@ -5,10 +5,11 @@ import (
 	"time"
 
 	"context"
+
 	proto "github.com/go-micro/examples/pubsub/srv/proto"
+	"github.com/pborman/uuid"
 	"go-micro.dev/v4"
 	"go-micro.dev/v4/util/log"
-	"github.com/pborman/uuid"
 )
 
 // send events using the publisher
@@ -41,8 +42,8 @@ func main() {
 	service.Init()
 
 	// create publisher
-	pub1 := micro.NewPublisher("example.topic.pubsub.1", service.Client())
-	pub2 := micro.NewPublisher("example.topic.pubsub.2", service.Client())
+	pub1 := micro.NewEvent("example.topic.pubsub.1", service.Client())
+	pub2 := micro.NewEvent("example.topic.pubsub.2", service.Client())
 
 	// pub to topic 1
 	go sendEv("example.topic.pubsub.1", pub1)

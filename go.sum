@@ -103,8 +103,6 @@ github.com/go-micro/plugins/v4/wrapper/select/roundrobin v1.1.0 h1:5HFQoKlLDnRfF
 github.com/go-micro/plugins/v4/wrapper/select/roundrobin v1.1.0/go.mod h1:YkMx3hnarSnV+H+C3LhSWyiGNXs1ueyh4a8I8R2c+L8=
 github.com/go-micro/plugins/v4/wrapper/select/shard v1.1.0 h1:NQBaFSf7wf0dNdEDQvx2hKY50qlnQJVtCOOeJwEsE7E=
 github.com/go-micro/plugins/v4/wrapper/select/shard v1.1.0/go.mod h1:B3INL5pXoth4VceCj4ONfFk0rju+zmOyytkQKBHanpc=
-github.com/go-micro/plugins/v4/wrapper/service v1.2.0 h1:oR94tOsxm7Gi2y5uQPgb1TGcK0/GVjHeJz5xH0tiTgU=
-github.com/go-micro/plugins/v4/wrapper/service v1.2.0/go.mod h1:dVQKnbuVwHhuvXxYQZqNuIV3ldpXIf+fTIJvk3VHrkg=
 github.com/go-playground/assert/v2 v2.0.1 h1:MsBgLAaY856+nPRTKrp3/OZK38U/wa0CcBYNjji3q3A=
 github.com/go-playground/assert/v2 v2.0.1/go.mod h1:VDjEfimB/XKnb+ZQfWdccd7VUvScMdVu0Titje2rxJ4=
 github.com/go-playground/locales v0.14.0 h1:u50s323jtVGugKlcYeyzC0etD1HifMjqmJqb8WugfUU=

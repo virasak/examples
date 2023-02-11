@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"context"
+
 	example "github.com/go-micro/examples/server/proto/example"
 	"go-micro.dev/v4"
 	"go-micro.dev/v4/client"
@@ -120,7 +121,7 @@ func main() {
 	service := micro.NewService()
 	service.Init()
 
-	p := micro.NewPublisher("topic.example", service.Client())
+	p := micro.NewEvent("topic.example", service.Client())
 
 	fmt.Println("\n--- Publisher example ---")
 	pub(p)
